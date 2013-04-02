@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Jekyll-Gist</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
+  </head>
+
+  <body>
+
+    {% if page.gist_id %}
+
+    <h1>{{ page.title }}</h1>
+    <h2>{{ page.date | date: '%Y-%m-%d' }}</h2>
+
+    <script src="https://gist.github.com/{{ page.gist_id }}.js"></script>
+  
+    <div id="comments-note">Comments can be seen/added on the gist page on github.</div>
+
+    {% else %}
+    {{ content }}
+    {% endif %}
+
+  </body>
+</html>

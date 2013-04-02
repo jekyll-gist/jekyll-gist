@@ -1,0 +1,24 @@
+/* Mostly copied from github auto pages theme "slate". */
+
+body {
+  background: #ddd; }
+
+pre, code {
+  color: #222222;
+  background-color: white;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-size: 14px; }
+
+pre {
+  padding: 10px;
+  overflow: auto; }
+
+code {
+  padding: 3px;
+  margin: 0 3px; }
+
+pre code {
+  display: block; }
+
+.markdown-body {
+  font-family: Arial; }
