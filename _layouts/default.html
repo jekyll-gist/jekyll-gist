@@ -1,16 +1,14 @@
 {% comment %}
-In order for this to work locally and on github pages,
-the stylesheet link needs to point to the correct URL.
-If run on github pages, it needs to have the prefix.
-If run locally, it does not need a prefix.
-When run on github pages, they use the --safe option.
+  In order for this to work locally and on github pages,
+  the stylesheet link needs to point to the correct URL.
+  If run on github pages, it needs to have the prefix.
+  If run locally, it does not need a prefix.
+  When run on github pages, they use the --safe option.
 {% endcomment %}
 
 {% assign usePrefix = site.safe %}
 
-{% if usePrefix %}
-{% assign prefix = site.prefix %}
-{% endif %}
+{% if usePrefix %} {% assign prefix = site.prefix %} {% endif %}
 
 <!DOCTYPE html>
 <html>
@@ -24,15 +22,15 @@ When run on github pages, they use the --safe option.
 
     {% if page.gist_id %}
 
-    <h1>{{ page.title }}</h1>
-    <h2>{{ page.date | date: '%Y-%m-%d' }}</h2>
+      <h1>{{ page.title }}</h1>
+      <h2>{{ page.date | date: '%Y-%m-%d' }}</h2>
 
-    <script src="https://gist.github.com/{{ page.gist_id }}.js"></script>
+      <script src="https://gist.github.com/{{ page.gist_id }}.js"></script>
 
-    <div id="comments-note">Comments can be seen/added on the gist page on github.</div>
+      <div id="comments-note">Comments can be seen/added on the gist page on github.</div>
 
     {% else %}
-    {{ content }}
+      {{ content }}
     {% endif %}
 
   </body>
